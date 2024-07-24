@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Button</title>
+    <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+.checkout-button {
+  display: inline-block;
+  width: 150px;
+  padding: 10px 20px;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+  background: linear-gradient(to bottom, #f0f0f0, #bbb);
+  border: 1px solid #999;
+  border-radius: 7px;
+  box-shadow:
+    0 1px 3px rgba(0,0,0,0.2),
+    inset 0 1px 1px rgba(255,255,255,0.8),
+    inset 0 -1px 1px rgba(0,0,0,0.5);
+  position: relative;
+  text-shadow: 0 1px 0 white;
+  outline: 1.5px solid #555;
+  outline-offset: 5px;
+}
+
+.checkout-button::before,
+.checkout-button::after {
+  content: "★";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 14px;
+}
+
+.checkout-button::before {
+  left: 10px;
+}
+
+.checkout-button::after {
+  right: 10px;
+}
+.cont{
+  background: #ccc;
+  border-radius: 10px;
+  width: 157px;
+  height: 49px;
+  display: grid;
+  place-items: center;
+}
+    </style>
+</head>
+<body>
+  <div class="cont">
+    <button class="checkout-button">CHECKOUT</button>
+  </div>
+</body>
+</html>
